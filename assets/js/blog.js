@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (post) {
         const postHTML = `
             <h2>${post.title}</h2>
-            <h3>Author: ${post.username}</h3>
+            <h3>${post.username}</h3>
             <p>${post.content}</p>
         `;
         blogPostElement.innerHTML = postHTML;
