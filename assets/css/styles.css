@@ -11,7 +11,7 @@
   }
 
   .header.header-dark {
-    background-image: url('./SVG files/DarkHeader.svg');
+    background-image: url('./DarkHeader.svg');
   }
   
   .header.header-dark h1{
@@ -30,7 +30,7 @@
     margin-left: 5px; /* Adjust the spacing as needed */
 }
   .header.header-light {
-    background-image: url('./SVG files/LightHeader.svg')
+    background-image: url('./LightHeader.svg')
   }
 
   .header.header-light h1 {
