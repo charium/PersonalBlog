@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Document</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/form.css">
+    <title>Personal Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
-    <form id="blogForm">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br>
 
-        <label for="blogTitle">Blog Title:</label><br>
-        <input type="text" id="blogTitle" name="blogTitle" required><br>
+    </div>
+    <div class="wrapper">
+        <header>
+            <h1>The orb wants to know your mind!</h1>
+            <button id="modeBtn">Change Mode</button>
+        </header>
 
-        <label for="blogContent">Blog Content:</label><br>
-        <textarea id="blogContent" name="blogContent" rows="6" cols="50" required></textarea><br>
+        <div class="content">
+            <div class="form-container">
+                <h2>Create a Blog Post</h2>
 
-        <input type="submit" value="Submit">
-    </form>
+                <form id="blogForm">
+                    <label for="username">Author:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Name" required><br>
 
-    <script src="script.js"></script>
+                    <label for="blogTitle">Subject:</label><br>
+                    <input type="text" id="blogTitle" name="blogTitle" placeholder="Title" title required><br>
+
+                    <label for="blogContent">Content:</label><br>
+                    <textarea id="blogContent" name="blogContent" rows="6" cols="50" placeholder="Speak your mind!"
+                        required></textarea><br>
+
+                    <input type="submit" value="Submit to the orb">
+                </form>
+            </div>
+
+            <div .image-container>
+                <img id="svgOrb" src="./assets/css/SVG files/orb.svg"></img>
+                <img id="realOrb" src="./assets/css/SVG files/realOrb.png"></img>
+                <div id="blogPreview">
+                     <!-- Preview content will be displayed here -->
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/form.js"></script>
 </body>
 </html>
-
