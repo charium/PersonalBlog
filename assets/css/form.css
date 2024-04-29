@@ -40,7 +40,7 @@ header {
     justify-content: space-between; /* Align items with space in between */
     align-items: center; /* Center items vertically */
     padding: 20px;
-    background-image: url('./SVG files/symbol-scatter-haikei.svg')
+    background-image: url('./symbol-scatter-haikei.svg')
     
 }
 
@@ -51,7 +51,6 @@ header {
 .form-container {
     flex: 1;
     padding: 20px;
-    background-image: url(./SVGfiles/)
 }
 
 
