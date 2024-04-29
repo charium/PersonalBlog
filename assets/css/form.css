@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(240, 217, 228);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-mode {
+    background-color: #2e2242;
+    color: #fff;
+  }
+
+h1 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal; 
+    color:beige;
+    text-shadow: 
+                -2px -2px 0 black, /* Top left */
+                2px -2px 0 black, /* Top right */
+                -2px 2px 0 black, /* Bottom left */
+                2px 2px 0 black; /* Bottom right */
+}
+
+h2 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Align items with space in between */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+    background-image: url('./SVG files/symbol-scatter-haikei.svg')
+    
+}
+
+.content {
+    display: flex;
+}
+
+.form-container {
+    flex: 1;
+    padding: 20px;
+    background-image: url(./SVGfiles/)
+}
+
+
+textarea,
+
+input[type="text"] 
+{
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    box-shadow: 100px;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal; 
+    
+}
+
+div div form input {
+    box-shadow: 10 20px 40px rgba(0, 0, 0, 0);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal; 
+
+}
+
+     /*Style to position the img image*/
+     #realOrb {
+        position: absolute; 
+        top: 170px;/* Adjust as needed */
+         left: 520px; /*Adjust as needed */
+         width: 600px;/*Adjust width of img */
+         height: 300px; /*Adjust height of img */
+         z-index: 1; /*Insure img appears on top */
+     }
+    
+    /*Style to position the background image */
+    #svgOrb { 
+        position: relative; 
+        width: 700px; /*Adjust width of background svg */
+        height: auto; /*Maintain aspect ratio */
+        z-index: 0; /*Ensure background svg is behind img */
+    } 
+
+    
+
+input[type="submit"]:hover {
+    background-color: darkblue;
+}
+
+.display-container h2 {
+    margin-top: 0;
+}
+
