@@ -40,7 +40,7 @@ header {
     justify-content: space-between; /* Align items with space in between */
     align-items: center; /* Center items vertically */
     padding: 20px;
-    background-image: url('symbol-scatter-haikei.svg')
+    background-image: url('./SVG files/symbol-scatter-haikei.svg')
     
 }
 
@@ -51,6 +51,7 @@ header {
 .form-container {
     flex: 1;
     padding: 20px;
+    background-image: url(./SVGfiles/)
 }
 
 
@@ -100,23 +101,12 @@ div div form input {
 
      /*Style to position the img image*/
      #realOrb {
-        position: absolute; 
-        top: 170px;/* Adjust as needed */
-         left: 520px; /*Adjust as needed */
-         width: 600px;/*Adjust width of img */
-         height: 300px; /*Adjust height of img */
-         z-index: 1; /*Insure img appears on top */
-     }
-    
-    /*Style to position the background image */
-    #svgOrb { 
         position: relative; 
-        width: 700px; /*Adjust width of background svg */
+         width: 700px; /*Adjust width of background svg */
         height: auto; /*Maintain aspect ratio */
-        z-index: 0; /*Ensure background svg is behind img */
-    } 
-
-    
+        left: -140px; /*fix the positioning */
+         z-index: 0; /*Insure img appears on top */
+     }
 
 input[type="submit"]:hover {
     background-color: darkblue;
