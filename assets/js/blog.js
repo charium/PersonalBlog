@@ -3,12 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const postIndex = urlParams.get('postIndex');
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
 
-    // Retrieve the specific post based on the index
-    const post = posts[postIndex];
+    const blogPostElement = document.getElementById('blogPost');
     const modeBtn = document.getElementById('modeBtn');
     const body = document.body;
     const header = document.querySelector('.header');
-    const blogPostElement = document.getElementById('blogPost');
 
     // Function to check if dark mode is enabled
     function isDarkModeEnabled() {
@@ -28,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function enableDarkMode() {
         body.classList.add('dark-mode');
         header.classList.add('header-dark');
+        blogPostElement.classList.add('darkBlog');
         header.classList.remove('header-light');
         modeBtn.textContent = "Light Mode";
         localStorage.setItem('darkMode', 'enabled');
@@ -37,18 +36,29 @@ document.addEventListener('DOMContentLoaded', function() {
     function disableDarkMode() {
         body.classList.remove('dark-mode');
         header.classList.remove('header-dark');
+        blogPostElement.classList.remove('darkBlog');
         header.classList.add('header-light');
         modeBtn.textContent = "Night Mode";
         localStorage.setItem('darkMode', null);
     }
 
-    if (post) {
-        const postHTML = `
-            <h2>${post.title}</h2>
-            <h3>${post.username}</h3>
-            <p>${post.content}</p>
-        `;
-        blogPostElement.innerHTML = postHTML;
+    // Function to display blog posts
+    function displayBlogPosts() {
+        let postsHTML = '';
+
+        // Loop through all stored posts
+        posts.forEach((post, index) => {
+            postsHTML += `
+                <div class="blog-item">
+                    <h2>${post.title}</h2>
+                    <h3>Author: ${post.username}</h3>
+                    <p>${post.content}</p>
+                </div>
+            `;
+        });
+
+        // Display all posts on the page
+        blogPostElement.innerHTML = postsHTML;
     }
 
     // Set initial dark mode state
@@ -63,9 +73,27 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleDarkMode();
     });
 
+    // Display existing blog posts and/or the newly added post
+    if (
+        // postIndex !== null && postIndex !== undefined && !isNaN(postIndex) && postIndex >= 0 && 
+        postIndex < posts.length) {
+        // If a valid postIndex is provided, display the specific post
+        const post = posts[postIndex];
+        const postHTML = `
+            <div class="blog-item">
+                <h2>${post.title}</h2>
+                <h3>Author: ${post.username}</h3>
+                <p>${post.content}</p>
+            </div>
+        `;
+        blogPostElement.innerHTML = postHTML;
+    } else {
+        // Otherwise, display all existing posts
+        displayBlogPosts();
+    }
 });
 
-// Function to navigate to form page
+ //Function to navigate to form page
 function goToForm() {
     window.location.href = 'index.html'; 
 }
