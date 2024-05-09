@@ -1,44 +1,51 @@
-// Function to handle form submission
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('blogForm');
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
+let posts = JSON.parse(localStorage.getItem('posts'))
 
-        // Retrieve form values
-        const username = document.getElementById('username').value;
-        const blogTitle = document.getElementById('blogTitle').value;
-        const blogContent = document.getElementById('blogContent').value;
 
-        // Create a new post object
-        const newPost = {
-            username: username,
-            title: blogTitle,
-            content: blogContent
-        };
+document.getElementById("blogForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
 
-        // Retrieve existing posts from local storage or initialize an empty array
-        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+    // Get form inputs
+    const username = document.getElementById("username").value;
+    const blogTitle = document.getElementById("blogTitle").value;
+    const blogContent = document.getElementById("blogContent").value;
 
-        // Add the new post to the posts array
-        posts.push(newPost);
+    // Check if all fields are filled
+    if (username.trim() === '' || blogTitle.trim() === '' || blogContent.trim() === '') {
+        alert('Please complete all fields.'); // Display an alert message
+        return; // Exit the function early
+    }
 
-        // Store the updated posts array back into local storage
-        localStorage.setItem('posts', JSON.stringify(posts));
+    // Construct blog post object
+    const post = {
+        username: username,
+        title: blogTitle,
+        content: blogContent
+    };
 
-        // Redirect to blog.html after form submission
-        window.location.href = 'blog.html';
-    });
+    // Retrieve existing posts from localStorage or initialize an empty array
+    posts.push(post);
+
+    // Add the new post to the array
+
+    // Store the updated posts array back to localStorage
+localStorage.setItem('posts', JSON.stringify(posts));
+
+// Redirect to the blog.html page and pass the post index as a query 
+window.location.href = `blog.html?postIndex=${posts.length - 1}`;
+
 });
 
-// Dark mode functions (keep as is)
+
+
 const modeBtn = document.getElementById('modeBtn');
 const body = document.body;
 
+// Function to check if dark mode is enabled
 function isDarkModeEnabled() {
     return localStorage.getItem('darkMode') === 'enabled';
 }
 
+// Function to toggle dark mode
 function toggleDarkMode() {
     if (isDarkModeEnabled()) {
         disableDarkMode();
@@ -47,25 +54,31 @@ function toggleDarkMode() {
     }
 }
 
+// Function to enable dark mode
 function enableDarkMode() {
     body.classList.add('dark-mode');
     modeBtn.textContent = "Light Mode";
     localStorage.setItem('darkMode', 'enabled');
 }
 
+// Function to disable dark mode
 function disableDarkMode() {
     body.classList.remove('dark-mode');
     modeBtn.textContent = "Night Mode";
     localStorage.setItem('darkMode', null);
 }
 
+// Toggle dark mode and set initial state
+modeBtn.addEventListener('click', function() {
+    toggleDarkMode();
+});
+
+// Set initial dark mode state
 if (isDarkModeEnabled()) {
     enableDarkMode();
 } else {
     disableDarkMode();
 }
 
-modeBtn.addEventListener('click', function() {
-    toggleDarkMode();
-});
+
 
