@@ -10,6 +10,10 @@
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
   }
+
+  .blogPost {
+    background-color: #701414;
+  }
   
   /* Light mode header image */
 .header-light {

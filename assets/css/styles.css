@@ -14,6 +14,7 @@
     background-image: url('./SVG files/DarkHeader.svg');
   }
   
+  
   .header.header-dark h1{
     color: white;
   } 
@@ -62,15 +63,9 @@
     width: 100%;
     height: 40%; /* Adjust this value to your preference */
     border-radius: 5px;
-}
-
+} 
   /* Wrapper styles */
-  .wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
+
   /* Header styles */
   header {
     text-align: center;
@@ -153,7 +148,7 @@
   /* Blog post styles */
   .post {
     background-color: #e1dac8;
-    padding: 20px;
+    padding: 0px;
     border-radius: 8px;
     margin-bottom: 15px;
   }
@@ -169,7 +164,18 @@
     margin-bottom: 5px;
     font-family: "Rubik Mono One", monospace;
   }
+
+  .blogPost {
+    background-color: #e4cc62;
+    padding: 20px;
+    border-radius: 10px;
+  }
   
+  .darkBlog {
+    background-color: rgb(172, 50, 23)
+  }
+  
+
   /* Applying Google Font to elements */
   h1, h2, h3, h4, p {
     font-family: "Rubik Mono One", monospace;
