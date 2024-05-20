@@ -1,4 +1,5 @@
-let posts = JSON.parse(localStorage.getItem('posts')) || [];
+let posts = JSON.parse(localStorage.getItem('posts'))
+
 
 document.getElementById("blogForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
@@ -21,17 +22,63 @@ document.getElementById("blogForm").addEventListener("submit", function(event) {
         content: blogContent
     };
 
-    // Add the new post to the array
+    // Retrieve existing posts from localStorage or initialize an empty array
     posts.push(post);
 
+    // Add the new post to the array
+
     // Store the updated posts array back to localStorage
-    localStorage.setItem('posts', JSON.stringify(posts));
+localStorage.setItem('posts', JSON.stringify(posts));
 
-    console.log("local posts: ", posts); // Log the posts to the console
-
-
-    // Redirect to the blog.html page and pass the post index as a query 
-    window.location.href = `blog.html?postIndex=${posts.length - 1}`;
+// Redirect to the blog.html page and pass the post index as a query 
+window.location.href = `blog.html?postIndex=${posts.length - 1}`;
 
 });
+
+
+
+const modeBtn = document.getElementById('modeBtn');
+const body = document.body;
+
+// Function to check if dark mode is enabled
+function isDarkModeEnabled() {
+    return localStorage.getItem('darkMode') === 'enabled';
+}
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    if (isDarkModeEnabled()) {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+}
+
+// Function to enable dark mode
+function enableDarkMode() {
+    body.classList.add('dark-mode');
+    modeBtn.textContent = "Light Mode";
+    localStorage.setItem('darkMode', 'enabled');
+}
+
+// Function to disable dark mode
+function disableDarkMode() {
+    body.classList.remove('dark-mode');
+    modeBtn.textContent = "Night Mode";
+    localStorage.setItem('darkMode', null);
+}
+
+// Toggle dark mode and set initial state
+modeBtn.addEventListener('click', function() {
+    toggleDarkMode();
+});
+
+// Set initial dark mode state
+if (isDarkModeEnabled()) {
+    enableDarkMode();
+} else {
+    disableDarkMode();
+}
+
+
 
