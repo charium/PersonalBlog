@@ -17,12 +17,12 @@
   
   /* Light mode header image */
 .header-light {
-    background-image: url('./SVG files/LightHeader.svg');
+    background-image: url('./SVGfiles/LightHeader.svg');
   }
   
   /* Dark mode header image */
   .header-dark {
-    background-image: url('./SVG files/DarkHeader.svg');
+    background-image: url('./SVGfiles/DarkHeader.svg');
   }
   
   /* Wrapper styles */
