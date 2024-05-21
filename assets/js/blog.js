@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayBlogPosts() {
         let postsHTML = '';
 
+        posts.reverse(); 
         // Loop through all stored posts
         posts.forEach((post, index) => {
             postsHTML += `
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         blogPostElement.innerHTML = postHTML;
+
         displayBlogPosts();
     } else {
         // Otherwise, display all existing posts
