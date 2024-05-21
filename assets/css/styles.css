@@ -86,7 +86,7 @@
   }
   
   h2 {
-    text-align: center;
+    /* text-align: center; */
   }
 
   /* Form container styles */
@@ -190,6 +190,8 @@
     border: 3px solid #c4ad49;
     border-radius: 8px;
     margin: 20px;
+    max-width: 1400px;
+
   }
 
    .blog-item h3 {
@@ -198,5 +200,7 @@
 
    .blog-item p {
     padding-left: 20px;
+    overflow-wrap: break-word; /* Ensure long words break to fit within the container */
+    word-break: break-word;
    }
   
