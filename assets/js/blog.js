@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         blogPostElement.innerHTML = postHTML;
+        displayBlogPosts();
     } else {
         // Otherwise, display all existing posts
         displayBlogPosts();

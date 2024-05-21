@@ -80,11 +80,15 @@
   
   /* Content styles */
   .content {
-    margin-top: 200px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
   }
   
+  h2 {
+    text-align: center;
+  }
+
   /* Form container styles */
   .form-container {
     flex: 1;
@@ -166,7 +170,6 @@
   }
 
   .blogPost {
-    background-color: #e4cc62;
     padding: 20px;
     border-radius: 10px;
   }
@@ -180,5 +183,20 @@
   h1, h2, h3, h4, p {
     font-family: "Rubik Mono One", monospace;
   }
-  
+
+  .blog-item {
+    background-color: #e4cc62;
+    padding: 20px;
+    border: 3px solid #c4ad49;
+    border-radius: 8px;
+    margin: 20px;
+  }
+
+   .blog-item h3 {
+    margin: 10px;
+   }
+
+   .blog-item p {
+    padding-left: 20px;
+   }
   
