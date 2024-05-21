@@ -54,6 +54,7 @@ header {
 }
 
 .form-container {
+    margin-left: 50px;
     flex: 1;
     padding: 20px;
     background-image: url(./SVGfiles/)
@@ -109,8 +110,7 @@ div div form input {
     width: 700px;
     /*Adjust width of background svg */
     height: auto;
-    /*Maintain aspect ratio */
-    left: -140px;
+    left: -170px;
     /*fix the positioning */
     z-index: 0;
     /*Insure img appears on top */

@@ -131,6 +131,7 @@ h2 {
 }
 
 .form-container form {
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
 }
