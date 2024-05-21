@@ -1,200 +1,253 @@
 /* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
 
-  .header {
-    background-image: url('./SVGfiles/DarkHeader.svg');
-    padding: 10px;
-  }
-  
-  /* Applying Google Font to elements */
-  h1, h2, h3, h4, p {
-    font-family: "Rubik Mono One", monospace;
-  }
+.header {
+  background-image: url("./SVGfiles/DarkHeader.svg");
+  padding: 10px;
+}
 
-  .header.header-dark h1{
-    color: white;
-  } 
+/* Applying Google Font to elements */
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Rubik Mono One", monospace;
+}
 
-  .header.header-dark h1::after {
-    content: '🌕'; /* Unicode character for the emoji */
-    display: inline-block; /* Ensures the emoji is displayed inline */
-    margin-left: 5px; /* Adjust the spacing as needed */
+.header.header-dark h1 {
+  color: white;
+}
+
+.header.header-dark h1::after {
+  content: "🌕";
+  /* Unicode character for the emoji */
+  display: inline-block;
+  /* Ensures the emoji is displayed inline */
+  margin-left: 5px;
+  /* Adjust the spacing as needed */
 }
 
 .header.header-dark h1::before {
-    content: '🌕  '; /* Unicode character for the emoji */
-    display: inline-block; /* Ensures the emoji is displayed inline */
-    margin-left: 5px; /* Adjust the spacing as needed */
+  content: "🌕  ";
+  /* Unicode character for the emoji */
+  display: inline-block;
+  /* Ensures the emoji is displayed inline */
+  margin-left: 5px;
+  /* Adjust the spacing as needed */
 }
-  .header.header-light {
-    background-image: url('./SVGfiles/LightHeader.svg')
-  }
 
-  .header.header-light h1 {
-    color: black;
-    
-  }
-  .header.header-light h1::after {
-    content: '🌝  '; /* Unicode character for the emoji */
-    display: inline-block; /* Ensures the emoji is displayed inline */
-    margin-left: 5px; /* Adjust the spacing as needed */
+.header.header-light {
+  background-image: url("./SVGfiles/LightHeader.svg")
 }
+
+.header.header-light h1 {
+  color: black;
+
+}
+
+.header.header-light h1::after {
+  content: "🌝  ";
+  /* Unicode character for the emoji */
+  display: inline-block;
+  /* Ensures the emoji is displayed inline */
+  margin-left: 5px;
+  /* Adjust the spacing as needed */
+}
+
 .header.header-light h1::before {
-    content: '🌝'; /* Unicode character for the emoji */
-    display: inline-block; /* Ensures the emoji is displayed inline */
-    margin-left: 5px; /* Adjust the spacing as needed */
+  content: "🌝";
+  /* Unicode character for the emoji */
+  display: inline-block;
+  /* Ensures the emoji is displayed inline */
+  margin-left: 5px;
+  /* Adjust the spacing as needed */
 }
-  /* Body styles */
-  body {
-    font-family: "Rubik Mono One", monospace;
-  }
 
-  .header {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40%; /* Adjust this value to your preference */
-    border-radius: 5px;
-} 
-  /* Wrapper styles */
+/* Body styles */
+body {
+  font-family: "Rubik Mono One", monospace;
+}
 
-  /* Header styles */
-  header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  header h1 {
-    font-size: 2.5em;
-    color: #333;
-    font-family: "Rubik Mono One", monospace;
-  }
-  
-  /* Content styles */
-  .content {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  h2 {
-    text-align: center;
-  }
+.header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  /* Adjust this value to your preference */
+  border-radius: 5px;
+}
 
-  /* Form container styles */
-  .form-container {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-container h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-  }
-  
-  .form-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-container label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
+/* Wrapper styles */
 
-  .form-container input {
-    box-shadow: 100px solid black;
-  }
-  
-  .form-container input[type="text"],
-  .form-container textarea {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form-container input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .form-container input[type="submit"]:hover {
-    background-color: #555;
-  }
-  
-  /* Display container styles */
-  .display-container {
-    flex: 1;
-    margin-left: 20px;
-  }
-  
-  .display-container h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-  }
-  
-  /* Blog post styles */
-  .post {
-    background-color: #e1dac8;
-    padding: 0px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .post h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    font-family: "Rubik Mono One", monospace;
-  }
-  
-  .post h4 {
-    font-size: 1em;
-    margin-bottom: 5px;
-    font-family: "Rubik Mono One", monospace;
-  }
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .blogPost {
-    padding: 20px;
-    border-radius: 10px;
-  }
+header h1 {
+  font-size: 2.5em;
+  color: #333;
+  font-family: "Rubik Mono One", monospace;
+}
 
-  .blog-item {
-    background-color: #e4cc62;
-    padding: 20px;
-    border: 3px solid #c4ad49;
-    border-radius: 8px;
-    margin: 20px;
-    max-width: 1400px;
+/* Content styles */
+.content {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
 
-  }
+h2 {
+  text-align: center;
+}
 
-   .blog-item h3 {
-    margin: 10px;
-   }
+/* Form container styles */
+.form-container {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-   .blog-item p {
-    padding-left: 20px;
-    overflow-wrap: break-word; /* Ensure long words break to fit within the container */
-    word-break: break-word;
-   }
+.form-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  box-shadow: 100px solid black;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Display container styles */
+.display-container {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.display-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+/* Blog post styles */
+.post {
+  background-color: #e1dac8;
+  padding: 0px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.post h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-family: "Rubik Mono One", monospace;
+}
+
+.post h4 {
+  font-size: 1em;
+  margin-bottom: 5px;
+  font-family: "Rubik Mono One", monospace;
+}
+
+.blogPost {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.blog-item {
+  background-color: #e4cc62;
+  padding: 20px;
+  border: 3px solid #c4ad49;
+  border-radius: 8px;
+  margin: 20px;
+  max-width: 1400px;
+
+}
+
+.blog-item h3 {
+  margin: 10px;
+}
+
+.blog-item p {
+  padding-left: 20px;
+  overflow-wrap: break-word;
+  /* Ensure long words break to fit within the container */
+  word-break: break-word;
+}
+
+footer {
+  align-items: center;
+  font-family: "Rubik Mono One", monospace;
+  background-image: url("SVGfiles/symbol-scatter-haikei.svg");
+  padding: 20px;
+  height: 100%
+}
+
+ul {
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 25%;
+
+}
+
+li {
+  color: white;
+  text-shadow: rgb(20, 18, 18) 2px 5px;
+  text-align: center;
+  display: inline;
+  margin-right: 10px;
+}
+
+a {
+  border: black;
+  color: white;
+}

@@ -1,7 +1,7 @@
 let posts = JSON.parse(localStorage.getItem('posts'))
 
 
-document.getElementById("blogForm").addEventListener("submit", function(event) {
+document.getElementById("blogForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
 
     // Get form inputs
@@ -28,10 +28,10 @@ document.getElementById("blogForm").addEventListener("submit", function(event) {
     // Add the new post to the array
 
     // Store the updated posts array back to localStorage
-localStorage.setItem('posts', JSON.stringify(posts));
+    localStorage.setItem('posts', JSON.stringify(posts));
 
-// Redirect to the blog.html page and pass the post index as a query 
-window.location.href = `blog.html?postIndex=${posts.length - 1}`;
+    // Redirect to the blog.html page and pass the post index as a query 
+    window.location.href = `blog.html?postIndex=${posts.length - 1}`;
 
 });
 
@@ -69,7 +69,7 @@ function disableDarkMode() {
 }
 
 // Toggle dark mode and set initial state
-modeBtn.addEventListener('click', function() {
+modeBtn.addEventListener('click', function () {
     toggleDarkMode();
 });
 

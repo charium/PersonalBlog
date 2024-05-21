@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const postIndex = urlParams.get('postIndex');
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         disableDarkMode();
     }
-    
-      // Event listener for mode button click
-      modeBtn.addEventListener('click', function() {
+
+    // Event listener for mode button click
+    modeBtn.addEventListener('click', function () {
         toggleDarkMode();
     });
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayBlogPosts() {
         let postsHTML = '';
 
-        posts.reverse(); 
+        posts.reverse();
         // Loop through all stored posts
         posts.forEach((post, index) => {
             postsHTML += `
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Display existing blog posts and/or the newly added post
     if (
-        postIndex !== null && postIndex !== undefined && !isNaN(postIndex) && postIndex >= 0 && 
+        postIndex !== null && postIndex !== undefined && !isNaN(postIndex) && postIndex >= 0 &&
         postIndex < posts.length) {
         // If a valid postIndex is provided, display the specific post
         const post = posts[postIndex];
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
- //Function to navigate to form page
+//Function to navigate to form page
 function goToForm() {
-    window.location.href = 'index.html'; 
+    window.location.href = 'index.html';
 }

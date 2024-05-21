@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,36 +13,44 @@
 </head>
 
 <body>
-        <header>
-            <h1>The orb wants to know your mind!</h1>
-            <button id="modeBtn">Change Mode</button>
-        </header>
-<!-- Main content -->
-        <div class="content">
-            <div class="form-container">
-                <h2>Create a Blog Post</h2>
-<!-- form -->
-                <form id="blogForm">
-                    <label for="username">Author:</label><br>
-                    <input type="text" id="username" name="username" placeholder="Name" required><br>
+    <header>
+        <h1>The orb wants to know your mind!</h1>
+        <button id="modeBtn">Change Mode</button>
+    </header>
+    <!-- Main content -->
+    <div class="content">
+        <div class="form-container">
+            <h2>Create a Blog Post</h2>
+            <!-- Form -->
+            <form id="blogForm">
+                <label for="username">Author:</label><br>
+                <input type="text" id="username" name="username" placeholder="Name" required><br>
 
-                    <label for="blogTitle">Subject:</label><br>
-                    <input type="text" id="blogTitle" name="blogTitle" placeholder="Title" title required><br>
+                <label for="blogTitle">Subject:</label><br>
+                <input type="text" id="blogTitle" name="blogTitle" placeholder="Title" required><br>
 
-                    <label for="blogContent">Content:</label><br>
-                    <textarea id="blogContent" name="blogContent" rows="6" cols="50" placeholder="Speak your mind!"
-                        required></textarea><br>
+                <label for="blogContent">Content:</label><br>
+                <textarea id="blogContent" name="blogContent" rows="6" cols="50" placeholder="Speak your mind!"
+                    required></textarea><br>
 
-                    <input type="submit" value="Submit to the orb">
-                </form>
-            </div>
-<!-- Image on the right -->
-            <div .image-container>
-                <img id="realOrb" src="./assets/css/SVGfiles/realOrb.png"></img> 
-            </div>
+                <input type="submit" value="Submit to the orb">
+            </form>
+        </div>
+        <!-- Image on the right -->
+        <div class="image-container">
+            <img id="realOrb" src="./assets/css/SVGfiles/realOrb.png" alt="Real Orb">
         </div>
     </div>
 
+    <footer>
+        <ul>
+            <li><a href="https://github.com/charium">Github</a></li> 
+            <li><a href="https://open.spotify.com/user/g8qu6xz4orsn4e10k0f2w2qrg">Spotify</a></li> 
+            <li><a href="https://www.google.com/search?client=firefox-b-1-d&sca_esv=33d761b251b7bc29&q=orb&source=lnms&uds=ADvngMhMdNrZOXxgVer5Gnb8fiBiGm6mxx6aeNRLfG-A9qXmg4PDEcfwoWa3M2IWIDPCtStyAXTAA7vJSRNvXonZX5Nud_uOZiww4xvQSbQdi-W7gU49i2WyJI9MUmlbGFWsmvYOqFcS7fdBK5geVTOWWdSIELB6bIY_joU83TL_6TxueWVDEC6dCz-dPVhGGNHB51H726Q_x9KrPa4ExfzcIRI8uG07vnc7E-xx5mVkC4RYxg4wq4vgMadsyX8MagW9B9kdBfvp3CNbjKy_xtnjM_-cEHpRdCHiGZcRfJSppHUSN0CmlXQ&sa=X&ved=2ahUKEwjVqN35vp-GAxU7EGIAHXIfCGQQ0pQJegQIChAB&biw=1138&bih=762&dpr=2">Google</a></li> 
+        </ul>
+    </footer>
+
     <script src="./assets/js/form.js"></script>
 </body>
+
 </html>
