@@ -10,11 +10,16 @@
     color: #fff;
   }
 
-  .header.header-dark {
+  .header {
     background-image: url('./SVGfiles/DarkHeader.svg');
+    padding: 10px;
   }
   
-  
+  /* Applying Google Font to elements */
+  h1, h2, h3, h4, p {
+    font-family: "Rubik Mono One", monospace;
+  }
+
   .header.header-dark h1{
     color: white;
   } 
@@ -86,7 +91,7 @@
   }
   
   h2 {
-    /* text-align: center; */
+    text-align: center;
   }
 
   /* Form container styles */
@@ -173,16 +178,6 @@
     padding: 20px;
     border-radius: 10px;
   }
-  
-  .darkBlog {
-    background-color: rgb(172, 50, 23)
-  }
-  
-
-  /* Applying Google Font to elements */
-  h1, h2, h3, h4, p {
-    font-family: "Rubik Mono One", monospace;
-  }
 
   .blog-item {
     background-color: #e4cc62;
@@ -203,4 +198,3 @@
     overflow-wrap: break-word; /* Ensure long words break to fit within the container */
     word-break: break-word;
    }
-  
